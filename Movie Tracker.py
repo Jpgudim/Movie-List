@@ -1,15 +1,12 @@
+import datetime
+
 list_file = open("Movie_List.txt", "a")
 
-print("Did you watch a movie? y/n")
-check = input("")
-if check != "y":
-    print ("Ok. Goodbye")
-    print ("program terminated")
-else:
-    print ("What movie did you watch?")
-    movie = input("")
-    movie = str(movie)
-list_file.write(movie + "\n")
+print ("What movie did you watch?")
+movie = input("")
+movie = str(movie)
+date = datetime.datetime.now()
+list_file.write(movie + "\n" + " - " + date.strftime("%x") + "\n")
 print()
 print ("Got it! That movie is added to the list")
 print()
