@@ -21,19 +21,16 @@ def print_list():
     if check == "y":
         print (movie_list)
     return check
-
 check = print_list()
 while check == "n":
     print ("would you like to add another movie? y/n")
     check2 = input("")
     if check2 == "y":
         get_movie()
+        check = print_list()
     if check2 != "y":
         print ("Ok. Goodbye!")
         print ("program terminated. File Closed")
         check = ""
-
-
-
 
 list_file.close()
